@@ -4,7 +4,9 @@ import json
 
 
 def urls() -> list:
-    return []
+    return [
+        'https://www.eslite.com/product/1005186222682128590007'
+    ]
 
 
 def request(url: str) -> str:

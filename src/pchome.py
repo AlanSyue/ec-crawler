@@ -4,7 +4,9 @@ import json
 
 
 def urls() -> list:
-    return []
+    return [
+        'https://24h.pchome.com.tw/prod/DYAJ88-A900FHDI4'
+    ]
 
 
 def request(url: str) -> str:
