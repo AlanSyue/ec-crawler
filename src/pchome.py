@@ -5,7 +5,7 @@ import json
 
 def urls() -> list:
     return [
-        'https://24h.pchome.com.tw/prod/DYAJ88-A900FHDI4'
+        'https://24h.pchome.com.tw/prod/DGCT1A-A900GMZO3'
     ]
 
 

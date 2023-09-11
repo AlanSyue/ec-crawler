@@ -16,12 +16,13 @@ if __name__ == "__main__":
     
     load_dotenv()
     topic_name = sys.argv[1]
+    token = os.getenv('LINE_NOTIFY_TOKEN')
 
     try:
         topic = TopicFactory.make(topic_name)
 
         for url in topic.urls():
-            sleep_time = random.uniform(1, 10)
+            sleep_time = random.uniform(1, 5)
             time.sleep(sleep_time)
 
             response = topic.request(url)
@@ -31,8 +32,8 @@ if __name__ == "__main__":
                 continue
 
             message = f"[{topic_name}] 有 {stock} 貨量，網址：{url}"
-            token = os.getenv('LINE_NOTIFY_TOKEN')
             lineTool.lineNotify(token, message)
     except Exception as e:
-        print(e)
+        message = f"[{topic_name}] error: {e}"
+        lineTool.lineNotify(token, message)
         exit(1)
