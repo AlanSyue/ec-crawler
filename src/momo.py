@@ -10,7 +10,7 @@ def urls() -> list:
 
 def request(url: str) -> str:
     headers = {
-        'authority': 'ecapi-cdn.pchome.com.tw',
+        'authority': 'www.momoshop.com.tw',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
     }
 
