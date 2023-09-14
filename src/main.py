@@ -21,18 +21,20 @@ if __name__ == "__main__":
     try:
         topic = TopicFactory.make(topic_name)
 
-        for url in topic.urls():
-            sleep_time = random.uniform(1, 5)
-            time.sleep(sleep_time)
+        for i in range(0, 5):
+            time.sleep(5)
+            for url in topic.urls():
+                sleep_time = random.uniform(0, 1)
+                time.sleep(sleep_time)
 
-            response = topic.request(url)
-            stock = topic.parse(response)
+                response = topic.request(url)
+                stock = topic.parse(response)
 
-            if stock == 0:
-                continue
+                if stock == 0:
+                    continue
 
-            message = f"[{topic_name}] 有 {stock} 貨量，網址：{url}"
-            lineTool.lineNotify(token, message)
+                message = f"[{topic_name}] 有 {stock} 貨量，網址：{url}"
+                lineTool.lineNotify(token, message)
     except Exception as e:
         message = f"[{topic_name}] error: {e}"
         lineTool.lineNotify(token, message)

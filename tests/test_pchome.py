@@ -1,11 +1,11 @@
 import src.pchome as pchome
 
 OUT_OF_STOCK_DATA = {
-    "response": 'try{jsonp_button([{"Qty":0}]);}catch(e){if(window.console){console.log(e);}}Ｆ'
+    "response": 'try{jsonp_button([{"Qty":0},{"Qty":0},{"Qty":0},{"Qty":0},{"Qty":0}]);}catch(e){if(window.console){console.log(e);}}'
 }
 
 IN_STOCK_DATA = {
-    "response": 'try{jsonp_button([{"Qty":20}]);}catch(e){if(window.console){console.log(e);}}'
+    "response": 'try{jsonp_button([{"Qty":20},{"Qty":0},{"Qty":0},{"Qty":0},{"Qty":0}]);}catch(e){if(window.console){console.log(e);}}'
 }
 
 
