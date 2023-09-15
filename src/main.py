@@ -24,7 +24,7 @@ if __name__ == "__main__":
         for i in range(0, 5):
             time.sleep(5)
             for url in topic.urls():
-                sleep_time = random.uniform(0, 1)
+                sleep_time = random.uniform(1, 2)
                 time.sleep(sleep_time)
 
                 response = topic.request(url)

@@ -5,7 +5,12 @@ import json
 
 def urls() -> list:
     return [
-        'https://www.eslite.com/product/1005186222682128590007'
+        'https://www.eslite.com/product/10052264232682446885007',
+        'https://www.eslite.com/product/10052264232682447027000',
+        'https://www.eslite.com/product/10052264232682446996000',
+        'https://www.eslite.com/product/10052264232682446986001',
+        'https://www.eslite.com/product/10052264232682447001000',
+        'https://www.eslite.com/product/10052264232682446986001'
     ]
 
 

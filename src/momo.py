@@ -4,7 +4,13 @@ from bs4 import BeautifulSoup
 
 def urls() -> list:
     return [
-        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11860077&str_category_code=1905200314&sourcePageType=4"
+        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11860072&str_category_code=2104400333&sourcePageType=4",
+        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11857489&str_category_code=2104400333&sourcePageType=4",
+        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11854641&str_category_code=2104400333&sourcePageType=4",
+        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11854643&str_category_code=2104400333&sourcePageType=4",
+        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11854650&str_category_code=2104400333&sourcePageType=4",
+        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11854639&str_category_code=2104400332&sourcePageType=4",
+        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11854635&str_category_code=2104400332&sourcePageType=4"
     ]
 
 
