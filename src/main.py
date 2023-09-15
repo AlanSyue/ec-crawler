@@ -29,12 +29,14 @@ if __name__ == "__main__":
 
                 response = topic.request(url)
                 stock = topic.parse(response)
-
+                print(url, stock)
                 if stock == 0:
                     continue
 
                 message = f"[{topic_name}] 有 {stock} 貨量，網址：{url}"
                 lineTool.lineNotify(token, message)
+
+        print(f"{topic_name} end at {time.time()}")
     except Exception as e:
         message = f"[{topic_name}] error: {e}"
         lineTool.lineNotify(token, message)

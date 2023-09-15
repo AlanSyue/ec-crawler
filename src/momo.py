@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def urls() -> list:
     return [
-        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8346898&Area=search&mdiv=403&oid=1_2&cid=index&kw=%E6%95%B8%E6%93%9A"
+        "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11860077&str_category_code=1905200314&sourcePageType=4"
     ]
 
 
@@ -21,8 +21,17 @@ def request(url: str) -> str:
 
 def parse(response: str) -> int:
     soup = BeautifulSoup(response, 'html.parser')
+    element = soup.find(id='buy_yes')
 
-    max_value = max(
-        int(option['value']) for option in soup.select('select#count option'))
+    is_for_sale = True
+    if element and 'style' in element.attrs and 'display:none' in element.attrs['style']:
+        is_for_sale = False
+
+    max_value = 0
+    if is_for_sale:
+        max_value = max(
+            int(option['value']) for option in soup.select('select#count option'))
+    else:
+        max_value = 0
 
     return max_value
