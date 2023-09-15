@@ -20,7 +20,7 @@ def request(url: str) -> str:
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
     }
 
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=20)
 
     return response.text
 
@@ -30,6 +30,9 @@ def parse(response: str) -> int:
     element = soup.find(id='buy_yes')
 
     is_for_sale = True
+    if element is None:
+        is_for_sale = False
+
     if element and 'style' in element.attrs and 'display:none' in element.attrs['style']:
         is_for_sale = False
 
