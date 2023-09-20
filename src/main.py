@@ -22,10 +22,8 @@ if __name__ == "__main__":
         topic = TopicFactory.make(topic_name)
 
         for i in range(0, 5):
-            if topic_name == 'momo':
-                time.sleep(10)
-            else:
-                time.sleep(5)
+            time.sleep(5)
+
             for url in topic.urls():
                 sleep_time = random.uniform(2, 4)
                 time.sleep(sleep_time)
@@ -43,5 +41,4 @@ if __name__ == "__main__":
     except Exception as e:
         message = f"[{topic_name}] error: {e}"
         print(message)
-        #lineTool.lineNotify(token, message)
         exit(1)
